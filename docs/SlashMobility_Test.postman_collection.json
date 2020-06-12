@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "cb563b6e-eea6-4413-90ef-ccc627949024",
+		"name": "SlashMobility_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Carlos\",\"email\":\"carlos.agudo.batista@gmail.com\",\"password\":\"123\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Jose\",\"email\":\"jose@gmail.com\",\"password\":\"321\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Carlos\",\"email\":\"carlos.agudo.batista@gmail.com\",\"password\":\"123\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User update password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIyLCJlbWFpbCI6ImNhcmxvcy5hZ3Vkby5iYXRpc3RhQGdtYWlsLmNvbSIsInVzZXJfbmFtZSI6IkNhcmxvcyIsImlhdCI6MTU5MTkxMDE2MCwiZXhwIjoxNTkxOTk2NTYwfQ.Q0o3h8RGn0erRyNukCsI_FpysTO2OTxv_4gz_SfwtyI\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Carlos\",\"email\":\"carlos.agudo.batista@gmail.com\",\"password\":\"12345\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/updatePassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User update ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTYyMjk3LCJleHAiOjE1OTIwNDg2OTd9.I0P93qZqlzBEJXL97vjAgnykhdfQ5V7l_vr-BclYHiw\""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"id\":\"22\",\"user_name\":\"Carlos\",\"email\":\"carlos_agudo@gmail.com\",\"password\":\"12345\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTUyOTU1LCJleHAiOjE1OTIwMzkzNTV9.yLhhr6yWBsvI1VEU5-bJ2Ndz2pxbZ0Y4uVQQndlAdYU\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Jose\",\"email\":\"jose@gmail.com\",\"password\":\"321\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/provider/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"provider",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User list users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTUyOTU1LCJleHAiOjE1OTIwMzkzNTV9.yLhhr6yWBsvI1VEU5-bJ2Ndz2pxbZ0Y4uVQQndlAdYU\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"user_name\":\"Jose\",\"email\":\"jose@gmail.com\",\"password\":\"321\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/user/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Provider register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Providers list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"FruitShop\",\"adress\":\"c/ street\",\"telephone\":\"666321\",\"city\": \"Barcelona\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/provider/providers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"provider",
+						"providers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Provider detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"FruitShop\",\"adress\":\"c/ street\",\"telephone\":\"666321\",\"city\": \"Barcelona\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/provider/providers/FruitShop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"provider",
+						"providers",
+						"FruitShop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Provider update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"id\":\"1\",\"name\":\"FruitShop\",\"adress\":\"c/ street 2\",\"telephone\":\"666321\",\"city\": \"Barcelona\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/provider/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"provider",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/products/Apple",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"products",
+						"Apple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"id\":\"1\",\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"red\",\"description\":\"Acid\",\"image\": \"imagePath\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products list by Type",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/Fruit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"Fruit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products list by provider city",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjMsImVtYWlsIjoiam9zZUBnbWFpbC5jb20iLCJ1c2VyX25hbWUiOiJKb3NlIiwiaWF0IjoxNTkxOTU3MzQxLCJleHAiOjE1OTIwNDM3NDF9.qm75_07JSWUX882QgAOGLd0TRI7JAoSaA2wO0lBqR8I\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"provider_id\":\"1\",\"name\":\"Apple\",\"type\":\"green\",\"description\":\"Delicious\",\"image\": \"imagePath\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/product/provider/Barcelona",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"provider",
+						"Barcelona"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

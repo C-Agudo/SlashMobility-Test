@@ -33,5 +33,8 @@ Route::get('/product/products', 'ProductController@list')->middleware(UserAuthMi
 Route::get('/product/products/{name}', 'ProductController@detail')->middleware(UserAuthMiddleware::class);
 Route::put('/product/update', 'ProductController@update')->middleware(UserAuthMiddleware::class);
 Route::get('/product/{type}', 'ProductController@listType')->middleware(UserAuthMiddleware::class);
+Route::get('/product/provider/{city}', 'ProductController@listByProviderCity')->middleware(UserAuthMiddleware::class);
+
+
 
 

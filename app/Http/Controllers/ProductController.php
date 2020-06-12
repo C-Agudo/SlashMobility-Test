@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use Validator;
+use DB;
 
 class ProductController extends Controller
 {
@@ -125,6 +126,33 @@ class ProductController extends Controller
                 'status'=>'succes',
                 'code'=> 200,
                 'message'=> $productList,                
+            );
+        }else{
+            $list = array(
+                'status'=>'error',
+                'code'=> 400,
+                'message'=> 'Product not found',                
+            );
+        }
+        return response()->json($list, $list['code']);
+    }
+
+    public function listByProviderCity($city){
+
+        $productList = Product::all()->load('provider');
+        $data = array();
+
+        foreach($productList as $product){
+            if($product->provider->city == $city){             
+                array_push($data, $product);
+            }
+        }
+
+        if(isset($productList)){
+            $list = array(
+                'status'=>'succes',
+                'code'=> 200,
+                'message'=> $data,                
             );
         }else{
             $list = array(

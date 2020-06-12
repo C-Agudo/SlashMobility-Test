@@ -9,6 +9,6 @@ class Provider extends Model
     protected $table = 'provider';
     
     public function products(){
-        return $this->hasMany('App\Product', 'provider_id');
+        return $this->hasMany('App\Product');
     }
 }
